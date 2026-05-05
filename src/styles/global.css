@@ -2,7 +2,7 @@
 
 /*
  * Dark navy palette — matches the EdgeSecura product (login uses
- * color-mix(srgb, #005495 30%, #0a0f2e) ≈ #091F50). Token NAMES kept the
+ * color-mix(srgb, #005497 30%, #0a0f2e) ≈ #091F50). Token NAMES kept the
  * same as the light-mode version so component classes stay valid; VALUES
  * inverted.
  *
@@ -28,7 +28,7 @@
   --color-paper-300: #243d80;
 
   --color-accent-700: #1d3f7d;
-  --color-accent-600: #005495;
+  --color-accent-600: #005497;
   --color-accent-500: #2a85d4;
   --color-accent-100: #143a82;
 

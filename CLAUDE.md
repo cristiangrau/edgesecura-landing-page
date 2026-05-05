@@ -84,7 +84,7 @@ public/
 
 ## Design language — "editorial, dense, navy"
 
-Inspired by enterprise-vendor sites. Restrained, B&W-with-one-accent typography, narrow content (`max-w-6xl`), tight letter-spacing on headings, generous whitespace. The single accent is EdgeSecura blue (`#005495`) layered on full-page navy.
+Inspired by enterprise-vendor sites. Restrained, B&W-with-one-accent typography, narrow content (`max-w-6xl`), tight letter-spacing on headings, generous whitespace. The single accent is EdgeSecura blue (`#005497`) layered on full-page navy.
 
 Page bg comes from the same color recipe as the EdgeSecura product login:
 
@@ -110,7 +110,7 @@ All colors live as CSS variables in `src/styles/global.css` under `@theme {}`. T
 | `--color-ink-300` | `#5d6c98` | Eyebrow / very muted |
 | `--color-ink-100` | `#3a4880` | Border-strong on dark |
 | `--color-accent-700` | `#1d3f7d` | Deep accent |
-| `--color-accent-600` | `#005495` | Brand accent |
+| `--color-accent-600` | `#005497` | Brand accent |
 | `--color-accent-500` | `#2a85d4` | Lighter accent (links / CTAs on dark) |
 | `--color-accent-100` | `#143a82` | Accent-tinted surface (chips) |
 

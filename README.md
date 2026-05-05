@@ -9,7 +9,7 @@ This repo is the **public website**, not the product itself. The product UI live
 - **Astro 5** — static-first multi-page framework, zero JS by default
 - **Tailwind CSS v4** — utility-first styling via `@tailwindcss/vite`, theme tokens declared in `@theme {}` inside `src/styles/global.css`
 - **Inter** — typography, loaded from Google Fonts in `Layout.astro`
-- **Editorial design language** — full-page navy palette matching the EdgeSecura product login (`color-mix(srgb, #005495 30%, #0a0f2e) ≈ #091F50`)
+- **Editorial design language** — full-page navy palette matching the EdgeSecura product login (`color-mix(srgb, #005497 30%, #0a0f2e) ≈ #091F50`)
 
 ## Getting started
 
@@ -85,7 +85,7 @@ All colors live as CSS variables in `src/styles/global.css` under `@theme {}`. T
 | `--color-deep` | Footer / extra-deep accents |
 | `paper-50` → `paper-300` | Surfaces (raised cards → subtle border) |
 | `ink-900` → `ink-100` | Foreground (heading → dimmest text → border-strong) |
-| `accent-700` → `accent-100` | Brand accent ladder (EdgeSecura blue `#005495`) |
+| `accent-700` → `accent-100` | Brand accent ladder (Lapis Lazuli `#005497`) |
 
 ## Sections in order
 
