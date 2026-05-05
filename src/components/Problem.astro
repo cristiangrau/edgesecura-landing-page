@@ -1,0 +1,37 @@
+---
+const points = [
+  {
+    title: "Spreadsheets and tickets",
+    body: "Most contractors are onboarded through a help-desk ticket and offboarded through a forgotten one. There is no system of record.",
+  },
+  {
+    title: "Access outlives the contract",
+    body: "Without a controlled lifecycle, partner accounts stay active months past the engagement. Auditors find them before you do.",
+  },
+  {
+    title: "Compliance evidence is manual",
+    body: "Quarterly access reviews, certifications, and offboarding proofs are reconstructed from logs every audit cycle.",
+  },
+];
+---
+<section class="border-b border-paper-300 bg-paper-100">
+  <div class="mx-auto max-w-6xl px-6 py-20 md:py-24">
+    <p class="text-xs uppercase tracking-[0.18em] text-ink-300 mb-4">The problem</p>
+    <h2 class="text-3xl md:text-4xl font-semibold max-w-3xl leading-tight">
+      Identity governance was built for employees. The risk is everyone else.
+    </h2>
+    <p class="mt-5 text-lg text-ink-500 max-w-3xl leading-relaxed">
+      Contractors, partners, vendors, and guest users now outnumber employees in many
+      enterprises. They have access to the same systems, but no HRIS owns their lifecycle.
+    </p>
+
+    <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-px bg-paper-300 border border-paper-300 rounded-lg overflow-hidden">
+      {points.map((p) => (
+        <div class="bg-paper-50 p-6">
+          <h3 class="text-base font-semibold mb-2">{p.title}</h3>
+          <p class="text-sm text-ink-500 leading-relaxed">{p.body}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

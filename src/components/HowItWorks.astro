@@ -1,0 +1,37 @@
+---
+const steps = [
+  {
+    n: "01",
+    title: "Onboard with intent",
+    body: "Contractor request enters EdgeSecura with a sponsor, a contract end date, and a role profile. Access is provisioned according to policy, never ad-hoc.",
+  },
+  {
+    n: "02",
+    title: "Certify on schedule",
+    body: "Sponsors and managers attest to continued need on a cadence you set. Stale entitlements are revoked automatically.",
+  },
+  {
+    n: "03",
+    title: "Offboard on the day",
+    body: "When the contract ends, every account, group, and credential is revoked the same hour. The audit log proves it.",
+  },
+];
+---
+<section id="how-it-works" class="border-b border-paper-300 bg-ink-900 text-paper-100">
+  <div class="mx-auto max-w-6xl px-6 py-20 md:py-24">
+    <p class="text-xs uppercase tracking-[0.18em] text-ink-300 mb-4">How it works</p>
+    <h2 class="text-3xl md:text-4xl font-semibold text-paper-50 max-w-3xl leading-tight">
+      A controlled lifecycle, end to end.
+    </h2>
+
+    <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-8">
+      {steps.map((s) => (
+        <div class="border-t border-ink-500 pt-5">
+          <p class="text-xs font-mono text-accent-500 mb-3">{s.n}</p>
+          <h3 class="text-lg font-semibold text-paper-50 mb-2">{s.title}</h3>
+          <p class="text-sm text-ink-100 leading-relaxed">{s.body}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

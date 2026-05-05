@@ -1,0 +1,27 @@
+---
+// Placeholder logos + one testimonial. Replace with real material before launch.
+const logos = ["Northwind", "Acme", "Globex", "Initech", "Hooli", "Umbrella"];
+---
+<section class="border-b border-paper-300">
+  <div class="mx-auto max-w-6xl px-6 py-16 md:py-20">
+    <p class="text-xs uppercase tracking-[0.18em] text-ink-300 text-center mb-10">
+      Trusted by security teams managing thousands of external identities
+    </p>
+    <div class="grid grid-cols-2 md:grid-cols-6 gap-8 items-center justify-items-center opacity-60">
+      {logos.map((l) => (
+        <span class="text-ink-300 font-semibold tracking-tight text-lg">{l}</span>
+      ))}
+    </div>
+
+    <figure class="mt-16 max-w-3xl mx-auto text-center">
+      <blockquote class="text-xl md:text-2xl text-ink-700 leading-relaxed">
+        “Our last access review took six weeks of manual reconciliation.
+        With EdgeSecura the same review takes an afternoon, and the
+        evidence is generated for us.”
+      </blockquote>
+      <figcaption class="mt-5 text-sm text-ink-500">
+        — Director of IAM, Fortune 500 financial services
+      </figcaption>
+    </figure>
+  </div>
+</section>

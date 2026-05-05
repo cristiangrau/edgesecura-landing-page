@@ -1,0 +1,56 @@
+---
+// Coming-soon holding page. Plain white background, colored logo,
+// tagline, short announcement line. The full landing page is preserved
+// at /preview while in development — swap this and src/pages/preview.astro
+// back when ready to launch.
+import "../styles/global.css";
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>EdgeSecura — Coming soon</title>
+    <meta name="description" content="Extend your edge. Secure every identity. EdgeSecura is launching soon." />
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta property="og:title" content="EdgeSecura — Coming soon" />
+    <meta property="og:description" content="Extend your edge. Secure every identity." />
+    <style>
+      /* Override the dark-navy body bg from global.css for this page only. */
+      html, body { background: #ffffff; color: #1c1d20; }
+    </style>
+  </head>
+  <body>
+    <main class="min-h-screen flex items-center justify-center px-6 py-16">
+      <p class="sr-only">
+        EdgeSecura is launching soon. The public website will be available
+        shortly. Please check back later.
+      </p>
+      <div class="w-full max-w-xl flex flex-col items-center text-center">
+        <img
+          src="/assets/logo.svg"
+          alt="EdgeSecura"
+          class="max-h-28 sm:max-h-40 md:max-h-48 w-auto max-w-full"
+        />
+
+        <h1 class="mt-12 text-2xl sm:text-3xl font-semibold tracking-tight text-gray-900 max-w-md leading-tight">
+          We're building something serious.
+        </h1>
+
+        <p class="mt-16 text-xs text-gray-500">
+          © {new Date().getFullYear()} EdgeSecura. All rights reserved.
+        </p>
+      </div>
+    </main>
+  </body>
+</html>

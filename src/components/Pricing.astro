@@ -1,0 +1,110 @@
+---
+// Tiers + numbers are placeholders. Replace before launch — the wrong price
+// here teaches your sales motion before you do.
+const tiers = [
+  {
+    name: "Starter",
+    price: "$4",
+    unit: "per external identity / month",
+    blurb: "Small security teams piloting controlled lifecycle for contractors.",
+    features: [
+      "Up to 250 external identities",
+      "1 directory bridge to your identity provider",
+      "Visual workflow builder",
+      "Quarterly certification campaigns",
+      "Standard audit log",
+      "Email support",
+    ],
+    cta: { label: "Start a pilot", href: "mailto:demo@edgesecura.com?subject=EdgeSecura%20Starter%20pilot" },
+    feature: false,
+  },
+  {
+    name: "Growth",
+    price: "$8",
+    unit: "per external identity / month",
+    blurb: "Mid-market and regulated teams running continuous certification.",
+    features: [
+      "Unlimited external identities",
+      "Unlimited directory + SaaS integrations",
+      "Continuous certification + SoD policies",
+      "Tenant isolation + customer-managed keys",
+      "Tamper-evident audit log + exports",
+      "SAML SSO + SCIM",
+      "Priority support, 4-hour response SLA",
+    ],
+    cta: { label: "Request a demo", href: "mailto:demo@edgesecura.com?subject=EdgeSecura%20Growth%20demo" },
+    feature: true,
+  },
+  {
+    name: "Enterprise",
+    price: "Custom",
+    unit: "",
+    blurb: "Compliance-led rollouts at scale, with bespoke deployment and assurances.",
+    features: [
+      "Everything in Growth",
+      "Dedicated tenant on request",
+      "Custom data residency (EU, US, regional)",
+      "Named CSM + named security contact",
+      "Quarterly audit-readiness reviews",
+      "Custom SLA, including penalties",
+      "MSA, DPA, and security questionnaire support",
+    ],
+    cta: { label: "Talk to sales", href: "mailto:sales@edgesecura.com?subject=EdgeSecura%20Enterprise" },
+    feature: false,
+  },
+];
+---
+<section id="pricing" class="border-b border-paper-300">
+  <div class="mx-auto max-w-6xl px-6 py-20 md:py-24">
+    <p class="text-xs uppercase tracking-[0.18em] text-ink-300 mb-4">Pricing</p>
+    <h2 class="text-3xl md:text-4xl font-semibold max-w-3xl leading-tight">
+      Priced per external identity. No surprise add-ons.
+    </h2>
+    <p class="mt-5 text-lg text-ink-500 max-w-2xl leading-relaxed">
+      Pay for the identities you govern, not seats, not connectors, not events.
+      Annual billing, Net-30 invoicing on Growth and above.
+    </p>
+
+    <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-px bg-paper-300 border border-paper-300 rounded-lg overflow-hidden">
+      {tiers.map((t) => (
+        <div class={`p-6 flex flex-col ${t.feature ? 'bg-ink-900 text-paper-100' : 'bg-paper-50'}`}>
+          <div class="flex items-baseline justify-between">
+            <h3 class={`text-base font-semibold ${t.feature ? 'text-paper-50' : 'text-ink-900'}`}>{t.name}</h3>
+            {t.feature && (
+              <span class="text-[10px] uppercase tracking-[0.18em] text-accent-500">Most teams</span>
+            )}
+          </div>
+          <div class="mt-5">
+            <span class={`text-4xl font-semibold tracking-tight ${t.feature ? 'text-paper-50' : 'text-ink-900'}`}>{t.price}</span>
+            {t.unit && (
+              <span class={`ml-2 text-sm ${t.feature ? 'text-ink-100' : 'text-ink-500'}`}>{t.unit}</span>
+            )}
+          </div>
+          <p class={`mt-3 text-sm leading-relaxed ${t.feature ? 'text-ink-100' : 'text-ink-500'}`}>{t.blurb}</p>
+          <ul class={`mt-6 space-y-2.5 text-sm ${t.feature ? 'text-paper-100' : 'text-ink-700'}`}>
+            {t.features.map((f) => (
+              <li class="flex gap-2.5">
+                <span class={`shrink-0 mt-1 ${t.feature ? 'text-accent-600' : 'text-accent-500'}`}>✓</span>
+                <span>{f}</span>
+              </li>
+            ))}
+          </ul>
+          <a
+            href={t.cta.href}
+            class={`mt-8 inline-flex items-center justify-center px-4 py-2.5 rounded-md text-sm font-medium transition-colors ${
+              t.feature
+                ? 'bg-paper-50 text-ink-900 hover:bg-paper-200'
+                : 'border border-paper-300 text-ink-700 hover:border-ink-300'
+            }`}
+          >
+            {t.cta.label}
+          </a>
+        </div>
+      ))}
+    </div>
+
+    <p class="mt-6 text-xs text-ink-300">
+      Prices in USD, exclusive of taxes. Volume discounts above 5,000 identities. Non-profit and academic pricing available.
+    </p>
+  </div>
+</section>

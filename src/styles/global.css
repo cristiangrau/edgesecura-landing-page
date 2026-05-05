@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+/*
+ * Dark navy palette — matches the EdgeSecura product (login uses
+ * color-mix(srgb, #005495 30%, #0a0f2e) ≈ #091F50). Token NAMES kept the
+ * same as the light-mode version so component classes stay valid; VALUES
+ * inverted.
+ *
+ * Brightness ordering on dark bg:
+ *   page (body) ----- deepest navy
+ *   paper-100 ------- band (slight lift, used by Problem / FAQ / SocialProof bgs)
+ *   paper-50 -------- raised cards (brighter than band)
+ *   paper-200 ------- hover surfaces
+ *   paper-300 ------- subtle border
+ *
+ * ink-* are foreground (light), accent-* tuned for legibility on navy.
+ */
+@theme {
+  --color-ink-900: #f5f7fc;
+  --color-ink-700: #d6dbe9;
+  --color-ink-500: #92a0c1;
+  --color-ink-300: #5d6c98;
+  --color-ink-100: #3a4880;
+
+  --color-paper-50: #142e6b;
+  --color-paper-100: #0d265b;
+  --color-paper-200: #1a3a82;
+  --color-paper-300: #243d80;
+
+  --color-accent-700: #1d3f7d;
+  --color-accent-600: #005495;
+  --color-accent-500: #2a85d4;
+  --color-accent-100: #143a82;
+
+  --color-page: #091f50;
+  --color-deep: #040b2a;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+
+  --shadow-card: 0 1px 2px rgba(4, 11, 42, 0.5), 0 1px 0 rgba(4, 11, 42, 0.4);
+}
+
+/*
+ * Base styles live in @layer base so Tailwind utility classes (which sit in
+ * @layer utilities) can override them. Without the layer, an unlayered
+ * `h1 { color: ... }` outranks `.text-gray-900` regardless of specificity
+ * because unlayered styles win against layered ones.
+ */
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background: var(--color-page);
+    color: var(--color-ink-700);
+  }
+
+  /* Tight headings, datasheet feel. */
+  h1, h2, h3, h4 {
+    letter-spacing: -0.02em;
+    color: var(--color-ink-900);
+  }
+}
+
+::selection {
+  background: var(--color-accent-500);
+  color: var(--color-page);
+}

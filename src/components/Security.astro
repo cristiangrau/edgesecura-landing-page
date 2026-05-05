@@ -1,0 +1,37 @@
+---
+const pillars = [
+  {
+    title: "Tenant isolation",
+    body: "Each customer's data sits in its own logically isolated environment. No shared records between tenants.",
+  },
+  {
+    title: "Encryption",
+    body: "Encrypted in transit and at rest with industry-standard ciphers. Customer-controlled keys on supported plans.",
+  },
+  {
+    title: "Auditability",
+    body: "Every privileged action is captured as a structured, tamper-evident event you can export to your SIEM.",
+  },
+  {
+    title: "Least privilege",
+    body: "Internal access is least-privilege by default and re-scoped to the calling tenant on every request.",
+  },
+];
+---
+<section id="security" class="border-b border-paper-300">
+  <div class="mx-auto max-w-6xl px-6 py-20 md:py-24">
+    <p class="text-xs uppercase tracking-[0.18em] text-ink-300 mb-4">Security & compliance</p>
+    <h2 class="text-3xl md:text-4xl font-semibold max-w-3xl leading-tight">
+      Built to pass the audit it helps you run.
+    </h2>
+
+    <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-px bg-paper-300 border border-paper-300 rounded-lg overflow-hidden">
+      {pillars.map((p) => (
+        <div class="bg-paper-50 p-6">
+          <h3 class="text-base font-semibold mb-2">{p.title}</h3>
+          <p class="text-sm text-ink-500 leading-relaxed">{p.body}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,32 @@
+---
+const links = [
+  { href: "#product", label: "Product" },
+  { href: "#how-it-works", label: "How it works" },
+  { href: "#security", label: "Security" },
+  { href: "#pricing", label: "Pricing" },
+  { href: "#faq", label: "FAQ" },
+];
+---
+<header class="sticky top-0 z-40 border-b border-paper-300 bg-paper-50/80 backdrop-blur">
+  <div class="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
+    <a href="/" class="flex items-center" aria-label="EdgeSecura home">
+      <img src="/assets/logo.svg" alt="EdgeSecura" class="h-9 w-auto brightness-0 invert" />
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-sm text-ink-500">
+      {links.map((l) => (
+        <a href={l.href} class="hover:text-ink-900 transition-colors">{l.label}</a>
+      ))}
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="mailto:hello@edgesecura.com" class="hidden sm:inline text-sm text-ink-500 hover:text-ink-900 transition-colors">
+        Contact us
+      </a>
+      <a
+        href="#cta"
+        class="inline-flex items-center text-sm px-3 py-1.5 rounded-md bg-ink-900 text-paper-50 hover:bg-ink-700 transition-colors"
+      >
+        Request a demo
+      </a>
+    </div>
+  </div>
+</header>

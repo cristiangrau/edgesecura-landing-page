@@ -1,0 +1,56 @@
+---
+import Icon from "./Icon.astro";
+
+const features = [
+  {
+    icon: "lifecycle",
+    title: "Lifecycle automation",
+    body: "Visual workflow builder turns contract-start, role-change, and end-of-engagement into deterministic, auditable runs.",
+  },
+  {
+    icon: "zero-trust",
+    title: "Zero-trust by default",
+    body: "Every access decision is policy-evaluated at request time. No standing privileges, no perpetual sessions.",
+  },
+  {
+    icon: "audit",
+    title: "Audit-ready by design",
+    body: "Every action — provision, certify, deny, revoke — is captured as a structured event with actor, target, and reason.",
+  },
+  {
+    icon: "workflow",
+    title: "Workflow engine",
+    body: "Durable execution engine. Long-running approvals, scheduled reviews, and retries survive restarts and outages.",
+  },
+  {
+    icon: "integrations",
+    title: "Directory and SaaS integrations",
+    body: "Bridge to your identity provider and the SaaS catalog your contractors already touch.",
+  },
+  {
+    icon: "compliance",
+    title: "Compliance reports",
+    body: "Generate access reviews and offboarding proofs on demand. Export in the format your auditor asks for.",
+  },
+] as const;
+---
+<section id="product" class="border-b border-paper-300">
+  <div class="mx-auto max-w-6xl px-6 py-20 md:py-24">
+    <p class="text-xs uppercase tracking-[0.18em] text-ink-300 mb-4">Product</p>
+    <h2 class="text-3xl md:text-4xl font-semibold max-w-3xl leading-tight">
+      One control plane for every non-employee identity.
+    </h2>
+
+    <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-paper-300 border border-paper-300 rounded-lg overflow-hidden">
+      {features.map((f) => (
+        <div class="bg-paper-50 p-6 hover:bg-paper-100 transition-colors">
+          <div class="w-9 h-9 rounded-md bg-accent-600/20 text-accent-500 flex items-center justify-center mb-4">
+            <Icon name={f.icon} class="w-[18px] h-[18px]" />
+          </div>
+          <h3 class="text-base font-semibold mb-2">{f.title}</h3>
+          <p class="text-sm text-ink-500 leading-relaxed">{f.body}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
