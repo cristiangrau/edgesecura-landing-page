@@ -210,7 +210,7 @@ The `.pa11yci.json` config currently only tests `/` because that is the only pag
 
 The build output (`dist/`) is fully static. Three reasonable hosts:
 
-1. **nginx on the EdgeSecura host** — `rsync` `dist/` to the server, configure a `server` block for the apex domain (`edgesecura.com`) with a `try_files $uri /index.html` fallback. Match the existing pattern from `compose.yml` in the parent monorepo.
+1. **nginx on the EdgeSecura host** — `rsync` `dist/` to the server, configure a `server` block for the apex domain (`edgesecura.dev`) with a `try_files $uri /index.html` fallback. Match the existing pattern from `compose.yml` in the parent monorepo.
 2. **Static-host platform** — point at the repo, set build command `npm run build`, publish dir `dist`. Auto-TLS, atomic deploys.
 3. **Built-in static-page service of the repo host** — small enough; would require a workflow to build + push to a deployment branch.
 

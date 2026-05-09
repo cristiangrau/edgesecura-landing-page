@@ -111,7 +111,7 @@ Speak **capabilities + outcomes**, not **components + protocols**. "Encrypted at
 Static `dist/` output from `npm run build` can be served by any static host:
 
 - **Any static-host platform** — point it at the repo, set build command `npm run build`, publish dir `dist`.
-- **nginx on the EdgeSecura host** — `rsync` `dist/` to the server, configure a `server` block for the apex domain (`edgesecura.com`) with a `try_files $uri /index.html` fallback.
+- **nginx on the EdgeSecura host** — `rsync` `dist/` to the server, configure a `server` block for the apex domain (`edgesecura.dev`) with a `try_files $uri /index.html` fallback.
 
 ## About EdgeSecura
 
