@@ -61,7 +61,8 @@ src/
 │   ├── Layout.astro        # Page shell (head, fonts, Nav, Footer)
 │   └── LegalLayout.astro   # Narrow article shell for legal pages
 ├── pages/
-│   ├── index.astro         # Landing page composition
+│   ├── index.astro         # Coming-soon holding page (white bg, no Layout)
+│   ├── preview.astro       # Full landing composition (uses Layout) — swap to index at launch
 │   ├── privacy.astro       # Privacy Policy (placeholder)
 │   ├── terms.astro         # Terms of Service (placeholder)
 │   └── dpa.astro           # Data Processing Agreement (placeholder)
